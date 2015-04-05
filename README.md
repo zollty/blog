@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-# blog
-[http://zollty.github.io/blog]
-=======
+blog[http://zollty.github.io/blog]
+
 #### Create new post
 
     rake post title='A Title'
@@ -30,4 +28,3 @@ Then, follow tips to do
 - Jekyll is licensed under the [MIT License](http://opensource.org/licenses/mit-license.html)
 - Pygments is licensed under the [BSD License](http://opensource.org/licenses/BSD-2-Clause)
 - Articles are licensed under the [CC BY 3.0 License](http://creativecommons.org/licenses/by/3.0/)
->>>>>>> gh-pages
