@@ -19,7 +19,7 @@ rss_path: /blog/rss.xml
 markdown: redcarpet
 redcarpet:
     extensions: ["fenced_code_blocks", "tables", "highlight", "strikethrough"]
-permalink: /blog/:year/:month/:title.html
+permalink: /:year/:month/:title.html
 
 assets_path: /blog/assets
 sass:
