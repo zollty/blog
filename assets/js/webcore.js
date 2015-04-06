@@ -57,7 +57,7 @@
     function findEntries(q) {
       var matches = [];
       var rq = new RegExp(q, 'im');
-      var rl = /^http:\/\/havee\.me(.+)$/;
+      //var rl = /^http:\/\/havee\.me(.+)$/;
       for (var i = 0; i < entries.length; i++) {
         var entry = entries[i];
         var title = $(entry.getElementsByTagName('title')[0]).text();
@@ -87,7 +87,7 @@
         $('.row').hide();
         $('#search-loader').show();
         if (entries == null) {
-          $.ajax({url: '/atom.xml?r=' + (Math.random() * 99999999999), dataType: 'xml', success: function(data) {
+          $.ajax({url: '/blog/atom.xml?r=' + (Math.random() * 99999999999), dataType: 'xml', success: function(data) {
             entries = data.getElementsByTagName('entry');
             findEntries(query);
           }});
