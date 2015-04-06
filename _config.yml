@@ -23,7 +23,7 @@ permalink: /:archive/:year/:month/:title.html
 
 assets_path: /blog/assets
 sass:
-    sass_dir: blog/assets/_sass
+    sass_dir: assets/_sass
     style: :compressed
 
 # comment
