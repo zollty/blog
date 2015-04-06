@@ -125,6 +125,10 @@ time.small {
   background-color: rgba($base07, $alpha * 5);
   border: 1px solid rgba($base08, $alpha);
   box-shadow: 0 1px 10px rgba($base08, $alpha * 2);
+  .post-card {
+	border: 1px solid #6F6F91;
+	border-radius: 3px;
+  }
   .title {
 	color: lighten($base03, 10%);
     border-bottom: 2px dashed lighten($base03, 10%);
@@ -134,7 +138,7 @@ time.small {
 	    color: $base03;
 	  }
     }
-	.title-date{
+	.title-date {
 		color: #AAA;
 		font-size: 14px;
 		margin-left: 10px;
