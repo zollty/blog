@@ -126,14 +126,19 @@ time.small {
   border: 1px solid rgba($base08, $alpha);
   box-shadow: 0 1px 10px rgba($base08, $alpha * 2);
   .title {
-  color: lighten($base03, 10%);
+	color: lighten($base03, 10%);
     border-bottom: 2px dashed lighten($base03, 10%);
-  a {
-    color: lighten($base03, 10%);
-    &:hover, &:focus {
-      color: $base03;
+    a {
+	  color: lighten($base03, 10%);
+	  &:hover, &:focus {
+	    color: $base03;
+	  }
     }
-  }
+	.title-date{
+		color: #AAA;
+		font-size: 14px;
+		margin-left: 10px;
+	}
   }
   p, ol, ul, table {
     code {
