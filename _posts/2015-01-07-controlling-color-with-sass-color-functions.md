@@ -30,8 +30,6 @@ darken($base, 10%);
 lighten($base, 10%);
 ```
 
-![Darken & lighten](//cdn.09hd.com/images/2015/01/darken-lighten.png)
-
 #### Saturate & Desaturate
 
 这两个将调整饱和度与去色，同样，Sass 会自动分析 HSL 值来进行调整，也需要百分比来表示
