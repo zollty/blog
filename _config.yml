@@ -19,9 +19,10 @@ title: "Zollty's Tweets"
 description: Zollty's Tweets
 url: http://blog.zollty.com/n
 
-atom_path: /n/atom.xml
-rss_path: /n/rss.xml
-assets_path: /n/assets
+# 相对于baseurl
+atom_path: /atom.xml
+rss_path: /rss.xml
+assets_path: /assets
 sass:
     sass_dir: assets/_sass
     style: :compressed
