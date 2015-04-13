@@ -9,6 +9,7 @@ title: {{ page.title | xml_escscape }}
     <title>{{ site.title }}</title>
     <description>{{ site.description }}</description>
 	<link>{{ site.url }}{{ site.rss_path }}</link>
+	<atom:link href="{{ site.url }}{{ site.rss_path }}" rel="self" type="application/rss+xml" />
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <ttl>1800</ttl>
