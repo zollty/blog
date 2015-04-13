@@ -10,7 +10,7 @@
       <article class="wrapper">
         <div id="search-loader" class="img-wrap">
           <div class="loading">
-            <img src="{{ site.assets_path }}/img/loading.png">
+            <img src="{{ site.baseurl }}{{ site.assets_path }}/img/loading.png">
           </div>
         </div>
         <div class="row clearfix">
@@ -21,9 +21,9 @@
       {% include footer.html %}
     </div>
 
-    <script src="{{ site.assets_path }}/js/jquery.min.js"></script>
-    <script src="{{ site.assets_path }}/js/bootstrap.min.js"></script>
-    <script src="{{ site.assets_path }}/js/webcore.js"></script>
+    <script src="{{ site.baseurl }}{{ site.assets_path }}/js/jquery.min.js"></script>
+    <script src="{{ site.baseurl }}{{ site.assets_path }}/js/bootstrap.min.js"></script>
+    <script src="{{ site.baseurl }}{{ site.assets_path }}/js/webcore.js"></script>
 
     {% include baidu-analytics.html %}
     {% if site.comments.duoshuo.name %}
