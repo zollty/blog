@@ -9,7 +9,6 @@ paginate: 5
 paginate_path: '/index:num'
 timezone:      Asia/Shanghai
 
-
 author:
     name: zollty
     github: zollty
@@ -19,7 +18,7 @@ author:
     facebook:
     googleplus:
     weibo: zollty
-	
+
 # Build settings
 markdown: redcarpet
 redcarpet:
