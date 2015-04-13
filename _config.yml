@@ -1,6 +1,6 @@
 # Site settings
 title: "Zollty's Blog"
-url: "//blog.zollty.com/blog"
+url: "//blog.zollty.com/n"
 highlighter: pygments
 paginate: 5
 author:
@@ -12,16 +12,19 @@ author:
     facebook:
     googleplus:
     weibo: zollty
-atom_path: /blog/atom.xml
-rss_path: /blog/rss.xml
-
+	
 # Build settings
 markdown: redcarpet
 redcarpet:
     extensions: ["fenced_code_blocks", "tables", "highlight", "strikethrough"]
-permalink: /:year/:month/:title.html
+permalink: tweet/:year/:month/:date/:title.html
 
-assets_path: /blog/assets
+# Serving
+baseurl: /n # does not include hostname
+
+atom_path: /n/atom.xml
+rss_path: /n/rss.xml
+assets_path: /n/assets
 sass:
     sass_dir: assets/_sass
     style: :compressed
