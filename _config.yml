@@ -1,30 +1,23 @@
-# Site settings
-title: "Zollty's Blog"
-highlighter: pygments
-
 # Outputting
 permalink: /tweet/:year/:month/:day/:title.html
 paginate: 5
 paginate_path: '/index:num'
 timezone:      Asia/Shanghai
 
-author:
-    name: zollty
-    github: zollty
-    email:
-    gitcafe: zollty
-    twitter:
-    facebook:
-    googleplus:
-    weibo: zollty
-
-# Build settings
-markdown: redcarpet
+# Conversion # Build settings
+lsi: true # 在github中是无效的
+highlighter: pygments
+markdown: rdiscount
 redcarpet:
     extensions: ["fenced_code_blocks", "tables", "highlight", "strikethrough"]
 
 # Serving
 baseurl: /n # does not include hostname
+
+# 站点信息 # Site settings
+title: "Zollty's Tweets"
+description: Zollty's Tweets
+url: http://blog.zollty.com/n
 
 atom_path: /n/atom.xml
 rss_path: /n/rss.xml
@@ -32,6 +25,16 @@ assets_path: /n/assets
 sass:
     sass_dir: assets/_sass
     style: :compressed
+
+author:
+    name: zollty
+    github: zollty
+    email: zollty@163.com
+    gitcafe: zollty
+    twitter:
+    facebook:
+    googleplus:
+    weibo: zollty
 
 # comment
 comments:
