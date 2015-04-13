@@ -27,6 +27,8 @@ sass:
     sass_dir: assets/_sass
     style: :compressed
 
+favicon: http://ires.qiniudn.com/my/img/favicon.ico
+
 author:
     name: zollty
     github: zollty
