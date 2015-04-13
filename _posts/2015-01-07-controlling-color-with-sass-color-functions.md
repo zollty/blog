@@ -39,8 +39,6 @@ saturate($base, 20%);
 desaturate($base, 20%);
 ```
 
-![Saturate & Desaturate](//cdn.09hd.com/images/2015/01/saturate-desaturate.png)
-
 #### Adjust-hue
 
 这将调整色彩的色相，同样通过百分比计算
@@ -48,8 +46,6 @@ desaturate($base, 20%);
 ```scss
 adjust-hue($base, 20%);
 ```
-
-![adjust-hue](//cdn.09hd.com/images/2015/01/adjust-hue.png)
 
 #### Other
 
