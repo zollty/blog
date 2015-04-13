@@ -17,7 +17,7 @@ author:
 markdown: redcarpet
 redcarpet:
     extensions: ["fenced_code_blocks", "tables", "highlight", "strikethrough"]
-permalink: tweet/:year/:month/:date/:title.html
+permalink: tweet/:year/:month/:day/:title.html
 
 # Serving
 baseurl: /n # does not include hostname
