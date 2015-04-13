@@ -1,6 +1,7 @@
 ---
 layout: null
 ---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -31,9 +32,9 @@ layout: null
     <div class="center">
       <h1>404</h1>
       <p>There isn't a Page here.</p>
-      <p>Jump to <a href="/">{{ site.title }}</a> after <span id="jumpto" style="font-weight: bold"> 5 </span> seconds,</p>
+      <p>Jump to <a href="{{ site.baseurl }}/">{{ site.title }}</a> after <span id="jumpto" style="font-weight: bold"> 5 </span> seconds,</p>
       <script type="text/javascript">countDown(5,'/');</script>
-      <p>or click <a href="/" target="_parent"><span style="font-weight: bold">Here</span></a> to return.</p>
+      <p>or click <a href="{{ site.baseurl }}/" target="_parent"><span style="font-weight: bold">Here</span></a> to return.</p>
     </div>
   </body>
 </html>
