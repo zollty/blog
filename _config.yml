@@ -4,7 +4,7 @@ url: "//blog.zollty.com/n"
 highlighter: pygments
 
 # Outputting
-permalink: tweet/:year/:month/:day/:title.html
+permalink: /tweet/:year/:month/:day/:title.html
 paginate: 5
 paginate_path: '/index:num'
 timezone:      Asia/Shanghai
