@@ -8,8 +8,8 @@ title: {{ page.title | xml_escscape }}
   <channel>
     <title>{{ site.title }}</title>
     <description>{{ site.description }}</description>
-	<link href="{{ site.url }}{{ site.rss_path }}" rel="self"/>
-    <link href="{{ site.url }}"/>
+	<link rel="self">{{ site.url }}{{ site.rss_path }}</link>
+    <link>{{ site.url }}</link>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <ttl>1800</ttl>
