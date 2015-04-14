@@ -4,12 +4,13 @@ layout: default
 <div class="col-md-9">
 {% for post in paginator.posts %}
   <div class="post-card">
-    <h3 class="title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><span class="title-date">{{ post.date | date:"%Y-%m-%d" }}</span></h3>
+    <h3 class="title"><span class="title-date">{{ post.date }}</span></h3>
     {% if post.content contains "<!-- more -->" %}
       {{ post.content | split:'<!-- more -->' | first }}
     {% else %}
       {{ post.content | strip_html | truncatewords:50 }}
     {% endif %}
+	<br/><a href="{{ site.baseurl }}{{ post.url }}">Leave a comments</a>
   </div>
 {% endfor %}
 
