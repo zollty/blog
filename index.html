@@ -18,23 +18,23 @@ layout: default
   <div class="pull-right">
     {% if paginator.previous_page %}
     {% if paginator.previous_page == 1 %}
-    <a class="btn btn-primary btn-sm" href="{{ site.baseurl }}/">��ҳ</a>
-    <a class="btn btn-primary btn-sm" href="{{ site.baseurl }}/">&laquo; ��һҳ</a>
+    <a class="btn btn-primary btn-sm" href="{{ site.baseurl }}/">首页</a>
+    <a class="btn btn-primary btn-sm" href="{{ site.baseurl }}/">&laquo; 上一页</a>
     {% else %}
-    <a class="btn btn-primary btn-sm" href="{{ site.baseurl }}/">��ҳ</a>
-    <a class="btn btn-primary btn-sm" href="{{ site.baseurl }}/index{{paginator.previous_page}}/">&laquo; ��һҳ</a>
+    <a class="btn btn-primary btn-sm" href="{{ site.baseurl }}/">首页</a>
+    <a class="btn btn-primary btn-sm" href="{{ site.baseurl }}/index{{paginator.previous_page}}/">&laquo; 上一页</a>
     {% endif %}
     {% else %}
-    <span><a class="btn btn-primary btn-sm disabled" href="{{ site.baseurl }}/">��ҳ</a></span>
-    <span><a class="btn btn-primary btn-sm disabled">&laquo; ��һҳ</a></span>
+    <span><a class="btn btn-primary btn-sm disabled" href="{{ site.baseurl }}/">首页</a></span>
+    <span><a class="btn btn-primary btn-sm disabled">&laquo; 上一页</a></span>
     {% endif %}
-    <span><a class="btn btn-primary btn-sm disabled">��ǰҳ: {{paginator.page}} ���� {{paginator.total_pages}}��</a></span>
+    <span><a class="btn btn-primary btn-sm disabled">当前页: {{paginator.page}} （共 {{paginator.total_pages}}</a></span>
     {% if paginator.next_page %}
-    <a class="btn btn-primary btn-sm" href="{{ site.baseurl }}/index{{paginator.next_page}}/">��һҳ &raquo;</a>
-    <a class="btn btn-primary btn-sm" href="{{ site.baseurl }}/index{{paginator.total_pages}}/">ĩҳ</a>
+    <a class="btn btn-primary btn-sm" href="{{ site.baseurl }}/index{{paginator.next_page}}/">下一页 &raquo;</a>
+    <a class="btn btn-primary btn-sm" href="{{ site.baseurl }}/index{{paginator.total_pages}}/">末页</a>
     {% else if paginator.page == paginator.total_pages %}
-    <span><a class="btn btn-primary btn-sm disabled">��һҳ &raquo;</a></span>
-    <span><a class="btn btn-primary btn-sm disabled">ĩҳ</a></span>
+    <span><a class="btn btn-primary btn-sm disabled">下一页 &raquo;</a></span>
+    <span><a class="btn btn-primary btn-sm disabled">末页</a></span>
     {% endif %}
   </div>
 </div>
