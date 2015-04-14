@@ -2,6 +2,9 @@
 layout: default
 ---
 <div class="col-md-9">
+  <p class="pull-right visible-xs">
+    <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+  </p>
 {% for post in paginator.posts %}
   <div class="post-card">
     <h3 class="title"><span class="title-date">{{ post.date | date:"%Y-%m-%d %H:%M" }}</span></h3>
@@ -38,6 +41,6 @@ layout: default
     {% endif %}
   </div>
 </div>
-<aside class="col-md-3 visible-lg visible-md">
+<aside class="col-md-3 visible-lg visible-md sidebar-offcanvas" id="sidebar">
   {% include recently_comments.html %}
 </aside>
