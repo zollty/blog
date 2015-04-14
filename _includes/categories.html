@@ -1,7 +1,7 @@
 {% capture site_categories %}{% for category in site.categories %}{{ category | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
 {% assign category_words = site_categories | split:',' | sort %}
-<!-- {{ site.categories.size }} -->
 <section>
+  <!-- {{ site.categories.size }} -->
   <h3 class="title">Categories</h3>
   <ul>
     {% for item in (0..site.categories.size) %}{% unless forloop.last %}
