@@ -355,3 +355,24 @@ img {
   display: none;
   text-align: center;
 }
+
+/* Begin zs-nav */
+.zs-narrow-nav {
+  .navbar {
+    min-height: 40px;
+    margin-bottom: 1px;
+  }
+  .navbar-brand {
+    height: 40px;
+    padding-top: 10px;
+  }
+  .navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .navbar-toggle {
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+}
+/* End zs-nav */
