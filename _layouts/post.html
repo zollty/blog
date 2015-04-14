@@ -5,7 +5,18 @@ layout: default
 <div class="col-md-12">
 <h2 class="title"><time class="small">{{ page.date | date: "%Y.%m.%d" }}</time></h2>
 {{ content }}
-
+<ul class="pager">
+  <li class="next"><a href="{{ site.baseurl }}{{ page.next.url }}" title="{{ page.next.date | date:"%Y-%m-%d %H:%M" }}">后一条（更新） &rarr;</a></li>
+  {% else %}
+  <li class="next disabled"><a href="#">后一条（更新） &rarr;</a></li>
+  {% endif %}
+  {% if page.previous %}
+  <li class="previous"><a  href="{{ site.baseurl }}{{ page.previous.url }}" title="{{ page.previous.date | date:"%Y-%m-%d %H:%M" }}">&larr; 前一条（更早）</a></li>
+  {% else %}
+  <li class="previous disabled"><a href="#">&larr; 前一条（更早）</a></li>
+  {% endif %}
+  {% if page.next %}
+</ul>
 
 {% include comments.html %}
 </div>
