@@ -47,6 +47,7 @@ layout: default
     width: 50%; /* 6 columns */
   }
 </style>
+<div class="row row-offcanvas row-offcanvas-right">
 <div class="col-md-9">
   <p class="pull-right visible-xs">
     <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
@@ -90,3 +91,11 @@ layout: default
 <aside class="col-md-3 visible-lg visible-md sidebar-offcanvas" id="sidebar">
   {% include recently_comments.html %}
 </aside>
+</div>
+<script>
+$(document).ready(function () {
+  $('[data-toggle="offcanvas"]').click(function () {
+    $('.row-offcanvas').toggleClass('active')
+  });
+});
+</script>
