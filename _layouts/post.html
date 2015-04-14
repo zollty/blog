@@ -6,14 +6,14 @@ layout: default
 {{ content }}
 <ul class="pager">
   {% if page.previous %}
-  <li class="previous"><a  href="{{ site.baseurl }}{{ page.previous.url }}" title='{{ page.previous.date | date: "%Y-%m-%d %H:%M" }}'>&larr; 上一条</a></li>
+  <li class="previous"><a  href="{{ site.baseurl }}{{ page.previous.url }}" title='{{ page.previous.date | date: "%Y-%m-%d %H:%M" }}'>&larr; 上一条（更早）</a></li>
   {% else %}
-  <li class="previous disabled"><a href="#">&larr; 上一条</a></li>
+  <li class="previous disabled"><a href="#">&larr; 上一条（更早）</a></li>
   {% endif %}
   {% if page.next %}
-  <li class="next"><a href="{{ site.baseurl }}{{ page.next.url }}" title='{{ page.next.date | date: "%Y-%m-%d %H:%M" }}'>下一条 &rarr;</a></li>
+  <li class="next"><a href="{{ site.baseurl }}{{ page.next.url }}" title='{{ page.next.date | date: "%Y-%m-%d %H:%M" }}'>下一条（更新） &rarr;</a></li>
   {% else %}
-  <li class="next disabled"><a href="#">下一条 &rarr;</a></li>
+  <li class="next disabled"><a href="#">下一条（更新） &rarr;</a></li>
   {% endif %}
 </ul>
 
