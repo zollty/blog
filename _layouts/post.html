@@ -7,15 +7,15 @@ layout: default
 {{ content }}
 <ul class="pager">
 {% if page.next %}
-  <li class="next"><a href="{{ site.baseurl }}{{ page.next.url }}" title="{{ page.next.date | date: "%Y-%m-%d %H:%M" }}">后一条（更新） &rarr;</a></li>
+  <li class="next"><a href="{{ site.baseurl }}{{ page.next.url }}" title="{{ page.next.date | date: "%Y-%m-%d %H:%M" }}">（更新）后一条 &rarr;</a></li>
 {% else %}
-  <li class="next disabled"><a href="#">后一条（更新） &rarr;</a></li>
+  <li class="next disabled"><a href="#">（更新）后一条 &rarr;</a></li>
 {% endif %}
   
 {% if page.previous %}
-  <li class="previous"><a  href="{{ site.baseurl }}{{ page.previous.url }}" title="{{ page.previous.date | date: "%Y-%m-%d %H:%M" }}">&larr; 前一条（更早）</a></li>
+  <li class="previous"><a  href="{{ site.baseurl }}{{ page.previous.url }}" title="{{ page.previous.date | date: "%Y-%m-%d %H:%M" }}">&larr; （更早）前一条</a></li>
 {% else %}
-  <li class="previous disabled"><a href="#">&larr; 前一条（更早）</a></li>
+  <li class="previous disabled"><a href="#">&larr; （更早）前一条</a></li>
 {% endif %}
 </ul>
 
