@@ -36,6 +36,7 @@ defaults:
       type: "posts" # The different types that are available to you are pages, posts, drafts or any collection in your site.
     values:
       layout: "post"
+      title: "nil"
 
 author:
     name: zollty

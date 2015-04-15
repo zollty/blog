@@ -6,7 +6,7 @@ layout: index
 {% for post in paginator.posts %}
   <div class="post-card">
     <h3 class="title">
-	{{ post.title | default: "Untitle" }}<a href="{{ site.baseurl }}{{ post.url }}">{{ page.title | default: "Untitle" }}$&nbsp;&nbsp;</a>
+	<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title}}$&nbsp;&nbsp;</a>
 	<span class="title-date">{{ post.date | date:"%Y-%m-%d %H:%M" | remove: " 00:00" }}</span></h3>
     {% if post.content contains "<!-- more -->" %}
       {{ post.content | split:'<!-- more -->' | first }}
