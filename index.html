@@ -5,7 +5,7 @@ layout: index
 <div class="col-md-9">
 {% for post in paginator.posts %}
   <div class="post-card">
-    <h3 class="title"><span class="title-date">{{ post.date | date:"%Y-%m-%d %H:%M" }}</span></h3>
+    <h3 class="title"><span class="title-date">{{ post.date | date:"%Y-%m-%d %H:%M" | remove: " 00:00" }}</span></h3>
     {% if post.content contains "<!-- more -->" %}
       {{ post.content | split:'<!-- more -->' | first }}
     {% else %}
