@@ -7,9 +7,12 @@ layout: index
 font-size: 13px;
 color: #818181;
 }
+.bk-color{
+  background-color: #C7EDCC;
+}
 </style>
 
-<div class="col-md-8">
+<div class="col-md-8 bk-color">
 {% for post in paginator.posts %}
   <div class="post-card" style="border-bottom: 1px dashed #00b300; margin-bottom: 15px;">
     {% if post.content contains "<!-- more -->" %}
