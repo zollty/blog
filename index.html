@@ -26,7 +26,7 @@ font-size: 13px;
 color: #818181;
 }
 </style>
-
+<div class="wrapper">
 <div class="col-md-8">
 {% for post in paginator.posts %}
   <div class="post-card">
@@ -38,7 +38,6 @@ color: #818181;
 	<br/>
 	<div class="meta pull-left"><i class="fa fa-calendar"></i> {{ post.date | date:"%Y-%m-%d %H:%M" | remove: " 00:00" }}&nbsp;&nbsp;&nbsp;<i class="fa fa-tags"></i>&nbsp;&nbsp;<a href="/tags/#study">study</a></div>
 	<div class="pull-right"><a href="{{ site.baseurl }}{{ post.url }}">查看 </a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{ site.baseurl }}{{ post.url }}">评论 </a></div>
-	<hr/>
   </div>
 {% endfor %}
 
