@@ -36,8 +36,8 @@ color: #818181;
       {{ post.content | strip_html | truncatewords:50 }}
     {% endif %}
 	<br/>
-	<div><span class="meta"><i class="fa fa-calendar"></i> {{ post.date | date:"%Y-%m-%d %H:%M" | remove: " 00:00" }}&nbsp;&nbsp;&nbsp;<i class="fa fa-tags"></i>&nbsp;&nbsp;<a href="/tags/#study">study</a></span>
-	<span class="text-right"><a href="{{ site.baseurl }}{{ post.url }}">查看 </a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{ site.baseurl }}{{ post.url }}">评论 </a></span></div>
+	<div class="meta"><i class="fa fa-calendar"></i> {{ post.date | date:"%Y-%m-%d %H:%M" | remove: " 00:00" }}&nbsp;&nbsp;&nbsp;<i class="fa fa-tags"></i>&nbsp;&nbsp;<a href="/tags/#study">study</a></div>
+	<div class="text-right"><a href="{{ site.baseurl }}{{ post.url }}">查看 </a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{ site.baseurl }}{{ post.url }}">评论 </a></div>
 	<hr/>
   </div>
 {% endfor %}
