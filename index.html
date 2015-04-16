@@ -38,14 +38,14 @@ color: #818181;
     {% endif %}
     {% else %}
     <span><a class="btn btn-primary btn-sm disabled" href="{{ site.baseurl }}/">首页</a></span>
-    <span><a class="btn btn-primary btn-sm disabled">&laquo; 上一页</a></span>
+    <span><a class="btn btn-primary btn-sm disabled">上一页</a></span>
     {% endif %}
-    <span><a class="btn btn-primary btn-sm disabled">第{{paginator.page}}页（共 {{paginator.total_pages}}）</a></span>
+    <span><a class="btn btn-primary btn-sm disabled">第{{paginator.page}}页(共{{paginator.total_pages}})</a></span>
     {% if paginator.next_page %}
     <a class="btn btn-primary btn-sm" href="{{ site.baseurl }}/index{{paginator.next_page}}/">下一页 &raquo;</a>
     <a class="btn btn-primary btn-sm" href="{{ site.baseurl }}/index{{paginator.total_pages}}/">末页</a>
     {% else if paginator.page == paginator.total_pages %}
-    <span><a class="btn btn-primary btn-sm disabled">下一页 &raquo;</a></span>
+    <span><a class="btn btn-primary btn-sm disabled">下一页</a></span>
     <span><a class="btn btn-primary btn-sm disabled">末页</a></span>
     {% endif %}
   </div>
