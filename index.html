@@ -2,18 +2,16 @@
 layout: index
 ---
 
-<div class="col-md-9">
+<div class="col-md-8">
 {% for post in paginator.posts %}
   <div class="post-card">
-    <h3 class="title">
-	<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title}}$&nbsp;&nbsp;</a>
-	<span class="title-date">{{ post.date | date:"%Y-%m-%d %H:%M" | remove: " 00:00" }}</span></h3>
     {% if post.content contains "<!-- more -->" %}
       {{ post.content | split:'<!-- more -->' | first }}
     {% else %}
       {{ post.content | strip_html | truncatewords:50 }}
     {% endif %}
-	<br/><p class="text-right"><a href="{{ site.baseurl }}{{ post.url }}">赞 </a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{ site.baseurl }}{{ post.url }}">评论 </a></p>
+	<br/><p class="text-right"><a href="{{ site.baseurl }}{{ post.url }}">查看 </a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{ site.baseurl }}{{ post.url }}">评论 </a></p>
+	<hr/>
   </div>
 {% endfor %}
 
@@ -41,7 +39,7 @@ layout: index
     {% endif %}
   </div>
 </div>
-<div class="col-md-3 visible-lg visible-md">
+<div class="col-md-4 visible-lg visible-md">
   {% include recently_comments.html %}
 </div>
 </div>
