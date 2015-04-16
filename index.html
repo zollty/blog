@@ -2,6 +2,31 @@
 layout: index
 ---
 
+<style>
+.fa {
+display: inline-block;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+.fa-tags:before {
+content: "\f02c";
+}
+
+.fa-calendar:before {
+content: "\f073";
+}
+
+.post-card .meta {
+font-size: 13px;
+color: #818181;
+}
+</style>
+
 <div class="col-md-8">
 {% for post in paginator.posts %}
   <div class="post-card">
@@ -10,7 +35,9 @@ layout: index
     {% else %}
       {{ post.content | strip_html | truncatewords:50 }}
     {% endif %}
-	<br/><p class="text-right"><a href="{{ site.baseurl }}{{ post.url }}">查看 </a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{ site.baseurl }}{{ post.url }}">评论 </a></p>
+	<br/>
+	<p class="meta"><i class="fa fa-calendar"></i> {{ post.date | date:"%Y-%m-%d %H:%M" | remove: " 00:00" }}&nbsp;&nbsp;&nbsp;<i class="fa fa-tags"></i>&nbsp;&nbsp;<a href="/tags/#study">study</a></p>
+	<p class="text-right"><a href="{{ site.baseurl }}{{ post.url }}">查看 </a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{ site.baseurl }}{{ post.url }}">评论 </a></p>
 	<hr/>
   </div>
 {% endfor %}
