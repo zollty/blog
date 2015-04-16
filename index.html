@@ -29,7 +29,7 @@ color: #818181;
 
 <div class="col-md-8">
 {% for post in paginator.posts %}
-  <div class="post-card" style="border-bottom: 1px solid #00b300; padding-bottom: 10px;">
+  <div class="post-card" style="border-bottom: 1px solid #00b300; margin-bottom: 15px;">
     {% if post.content contains "<!-- more -->" %}
       {{ post.content | split:'<!-- more -->' | first }}
     {% else %}
