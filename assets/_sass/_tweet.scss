@@ -8,6 +8,7 @@ $base05: cyan;
 $base06: moccasin;
 $base07: #f5f5d5;
 $base08: black;
+$base09: #C7EDCC;
 
 $alpha: 1/6;
 
@@ -225,7 +226,7 @@ img {
   border-bottom: 1px solid lighten($base03, 10%);
   margin-bottom: 15px;
   padding: 10px 8px 0 10px;
-  background-color: #C7EDCC;
+  background-color: $base09;
   .meta {
     font-size: 13px;
     color: #818181;
@@ -240,6 +241,8 @@ img {
 
 .sed-header {
   border-bottom: 1px solid lighten($base03, 10%);
+  border-left: 1px solid $base09;
+  border-right: 1px solid $base09;
   background-color: rgba($base07, $alpha*6);
   .title {
     padding-left: 12px;
