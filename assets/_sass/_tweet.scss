@@ -22,7 +22,7 @@ $line-height: 1;
 }
 
 @mixin text-shadow {
-  text-shadow: 0 1px 0px rgba($base07, $alpha*3), 0 1px 1px rgba($base08, $alpha*3);
+  text-shadow: 0 1px 0px $base07, 0 1px 1px rgba($base08, $alpha*3);
 }
 
 body {
