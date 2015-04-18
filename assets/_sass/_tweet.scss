@@ -221,10 +221,15 @@ img {
   }
 }
 
-.post-card .meta {
-  font-size: 13px;
-  color: #818181;
+.post-card {
+  border-bottom: 2px dashed #00b300;
+  margin-bottom: 15px;
+  .meta {
+    font-size: 13px;
+    color: #818181;
+  }
 }
+
 .bk-color{
   background-color: #C7EDCC;
 }
