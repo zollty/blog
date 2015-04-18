@@ -21,7 +21,7 @@ $line-height: 1;
 }
 
 @mixin text-shadow {
-  text-shadow: 0 1px 0px $base07, 0 1px 1px rgba($base08, $alpha*3);
+  text-shadow: 0 1px 0px rgba($base07, $alpha*3), 0 1px 1px rgba($base08, $alpha*3);
 }
 
 body {
@@ -241,8 +241,6 @@ img {
 .sed-header {
   border-bottom: 1px solid lighten($base03, 10%);
   background-color: rgba($base07, $alpha*6);
-  margin-left: -14px;
-  margin-right: -14px;
   .title {
     padding-left: 12px;
     font-size: $font-size * 1.5;
