@@ -244,6 +244,9 @@ img {
     font-size: $font-size * 1.5;
 	@include text-shadow;
   }
+  .top-bar {
+    padding-top: 8px;
+  }
 }
 
 #search-loader {
