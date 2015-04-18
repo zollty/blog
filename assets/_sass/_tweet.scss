@@ -222,8 +222,10 @@ img {
 }
 
 .post-card {
-  border-bottom: 2px dashed lighten($base03, 10%);
+  border-bottom: 1px solid lighten($base03, 10%);
   margin-bottom: 15px;
+  padding: 10px 8px 0 10px;
+  background-color: #C7EDCC;
   .meta {
     font-size: 13px;
     color: #818181;
@@ -231,7 +233,9 @@ img {
 }
 
 .bk-color{
-  background-color: #C7EDCC;
+  background-color: rgba($base07, $alpha*6);
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .sed-header {
