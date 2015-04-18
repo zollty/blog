@@ -4,35 +4,27 @@
   <p>If you are using IE 9 or later, make sure you <a href="http://windows.microsoft.com/en-us/internet-explorer/use-compatibility-view#ie=ie-8" target="_blank" class="alert-link">turn off "Compatibility view"</a>.</p>
 </div>
 <![endif]-->
-<nav class="navbar navbar-inverse navbar-static-top my-header">
-  <div class="container-fluid">
-	<div class="navbar-header">
-	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-		<span class="sr-only">Toggle navigation</span>
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-	  </button>
-	  <a class="navbar-brand" title="{{ site.title }}" href="{{ site.url }}">{{ site.title }}</a>
-	</div>
-	<div id="navbar" class="navbar-collapse collapse">
-	  <ul class="nav navbar-nav navbar-right">
-		<li><a href="{{ site.baseurl }}{{ '/tags' }}" title="分类|标签" rel="nofollow"><span class='fa fa-tags fa-lg'></span></a></li>
-		<li><a href="{{ site.baseurl }}{{ '/about' }}" title="关于"><span class='fa fa-user fa-lg'></span></a></li>
-		{% if site.author.twitter %}
-		<li><a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" title="twitter" rel="nofollow"><span class="fa fa-twitter fa-lg"></span></a></li>
-		{% endif %}
-		{% if site.author.facebook %}
-		<li><a href="http://www.facebook.com/{{ site.author.facebook }}" target="_blank" title="facebook" rel="nofollow"><span class="fa fa-facebook fa-lg"></span></a></li>
-		{% endif %}
-		{% if site.author.weibo %}
-		<li><a href="http://weibo.com/{{ site.author.weibo }}" target="_blank" title="Weibo" rel="nofollow"><span class="fa fa-weibo fa-lg"></span></a></li>
-		{% endif %}
-		<li><a href="{{ site.baseurl }}{{ site.rss_path }}" target="_blank" title="RSS" rel="nofollow"><span class='fa fa-rss fa-lg'></span></a></li>
-	  </ul>
-	  <form class="navbar-form navbar-right">
-		<input type="text" class="form-control" placeholder="Search...">
-	  </form>
-	</div>
-  </div>
-</nav>
+<header class="header">
+  <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+  <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <div class="title"><a title="{{ site.title }}" href="{{ site.url }}">{{ site.title }}</a></div>
+  <ul class="nav navbar-nav collapse navbar-collapse bs-navbar-collapse navbar-right">
+    <li><a href="{{ site.baseurl }}{{ '/tags' }}" title="分类|标签" rel="nofollow"><span class='fa fa-tags fa-lg'></span></a></li>
+    <li><a href="{{ site.baseurl }}{{ '/about' }}" title="关于"><span class='fa fa-user fa-lg'></span></a></li>
+    {% if site.author.twitter %}
+    <li><a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" title="twitter" rel="nofollow"><span class="fa fa-twitter fa-lg"></span></a></li>
+    {% endif %}
+    {% if site.author.facebook %}
+    <li><a href="http://www.facebook.com/{{ site.author.facebook }}" target="_blank" title="facebook" rel="nofollow"><span class="fa fa-facebook fa-lg"></span></a></li>
+    {% endif %}
+    {% if site.author.weibo %}
+    <li><a href="http://weibo.com/{{ site.author.weibo }}" target="_blank" title="Weibo" rel="nofollow"><span class="fa fa-weibo fa-lg"></span></a></li>
+    {% endif %}
+
+    <li><a href="{{ site.baseurl }}{{ site.rss_path }}" target="_blank" title="RSS" rel="nofollow"><span class='fa fa-rss fa-lg'></span></a></li>
+  </ul>
+</header>

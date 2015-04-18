@@ -87,15 +87,6 @@ time.small {
   color: darken($base07, 50% );
 }
 
-.my-header {
-  margin-bottom: 1px;
-  background-color: rgba($base07, $alpha);
-  border: none;
-  .container-fluid {
-    padding-left: 0;
-  }
-}
-
 .header {
   display: inline;
   .title {
