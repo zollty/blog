@@ -12,7 +12,7 @@ layout: index
     {% endif %}
 	<span class="meta"><i class="fa fa-calendar"></i> {{ post.date | date:"%Y-%m-%d %H:%M" | remove: " 00:00" }}
 	{% if post.tags | size >0 %}&nbsp;&nbsp;&nbsp;<i class="fa fa-tags"></i>&nbsp;&nbsp;<a href="/tags/#study">study</a></span>
-	{% endif %}
+	{% endif %}<!-- {{ post.tags }} -->
 	<p class="pull-right"><a href="{{ site.baseurl }}{{ post.url }}">查看 </a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{ site.baseurl }}{{ post.url }}#ds-thread">评论 </a></p>
   </div>
 {% endfor %}
