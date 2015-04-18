@@ -1,6 +1,5 @@
 ---
 title: "公共 DNS 记录"
-category: Internet
 tags: DNS 记录
 ---
 
