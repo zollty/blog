@@ -15,7 +15,7 @@ layout: index
   <div class="post-card">
     {% if post.content contains "<!-- more -->" %}
       {{ post.content | split:'<!-- more -->' | first }}
-	  <p><a href="{{ site.baseurl }}{{ post.url }}">阅读全文</a></p>
+	  <p><a href="{{ site.baseurl }}{{ post.url }}">阅读全文...</a></p>
     {% else %}
       {{ post.content }}
     {% endif %}
