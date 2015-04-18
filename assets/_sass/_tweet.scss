@@ -28,7 +28,7 @@ body {
   font-size: $font-size;
   line-height: $line-height * 1.6;
   color: lighten($base08, 10%);
-  background: rgba($base07, $alpha);
+  background-color: rgba($base07, $alpha*6);
   @include sans-serif;
   * {
     transition: all .2s;
