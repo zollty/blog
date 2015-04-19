@@ -10,26 +10,7 @@
 	</div>
 </div>
 
-<h2 class="center">标签</h2>
-<select class="form-control">
-  {% for tag in site.tags %} 
-  <option><a href="#tag-{{ tag[0] }}">{{ tag[0] }}&nbsp;({{ tag[1].size }})</a></option>
-  {% endfor %}
-</select>
-
-<dl class="dl-horizontal">
-  {% for tag in site.tags %} 
-  <dt><a href="#tag-{{ tag[0] }}">{{ tag[0] }}</a></dt>
-  <dd><span class="badge">{{ tag[1].size }}</span></dd>
-  {% endfor %}
-</dl>
-
-<ul class="list-unstyled">
-  {% for tag in site.tags %} 
-  <li><a href="#tag-{{ tag[0] }}">{{ tag[0] }}&nbsp;<span class="badge">{{ tag[1].size }}</span></a></li>
-  {% endfor %}
-</ul>
-
+<h3 class="title">分类</h3>
 <div class="my-side-tags">
 	<ul class="list-group">
 	  {% for tag in site.tags %} 
@@ -41,6 +22,7 @@
 	</ul>
 </div>
 
+<h3 class="title">存档</h3>
   <div class="my-side-tags">
 	<ul class="list-group">
 {% assign ym_count = 0 %}
@@ -74,15 +56,24 @@
 
 
 
+<select class="form-control">
+  {% for tag in site.tags %} 
+  <option><a href="#tag-{{ tag[0] }}">{{ tag[0] }}&nbsp;({{ tag[1].size }})</a></option>
+  {% endfor %}
+</select>
 
+<dl class="dl-horizontal">
+  {% for tag in site.tags %} 
+  <dt><a href="#tag-{{ tag[0] }}">{{ tag[0] }}</a></dt>
+  <dd><span class="badge">{{ tag[1].size }}</span></dd>
+  {% endfor %}
+</dl>
 
-
-
-
-
-
-
-
+<ul class="list-unstyled">
+  {% for tag in site.tags %} 
+  <li><a href="#tag-{{ tag[0] }}">{{ tag[0] }}&nbsp;<span class="badge">{{ tag[1].size }}</span></a></li>
+  {% endfor %}
+</ul>
 
 {% if site.comments.duoshuo.name %}
   <h3 class="title">最新评论</h3>
