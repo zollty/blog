@@ -57,18 +57,18 @@
 
 
     {% if forloop.last %}
-      <span class="badge">{{ forloop.index -ym_count }}</span>
+      <span class="badge">{{ forloop.index | minus: ym_count }}</span>
 	  </li>
     {% else %}
         {% if year != nyear %}
-		  <span class="badge">{{ forloop.index - ym_count }}</span>
+		  <span class="badge">{{ forloop.index | minus: ym_count }}</span>
 		  </li>
 		  {% assign ym_count = forloop.index %}
 		  <li class="list-group-item">
 			<a href="#tag-{{ tag[0] }}">{{ nyear }}-{{ month }}</a>
         {% else %}
           {% if month != nmonth %}
-			  <span class="badge">{{ forloop.index - ym_count }}</span>
+			  <span class="badge">{{ forloop.index | minus: ym_count }}</span>
 			  </li>
 			  {% assign ym_count = forloop.index %}
 			  <li class="list-group-item">
