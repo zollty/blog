@@ -272,6 +272,21 @@ img {
   text-align: center;
 }
 
+.my-pager {
+  background-color: #fff;
+  border-left: 1px solid $base09;
+  border-right: 1px solid $base09;
+  margin-bottom: -9px;
+  margin-top: -14px;
+}
+
+.my-comments {
+  background-color: #fff;
+  border-left: 1px solid $base09;
+  border-right: 1px solid $base09;
+  border-bottom: 1px solid $base09;
+}
+
 /* Begin zs-nav */
 .zs-narrow-nav {
   font-size: 14px;
