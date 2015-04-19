@@ -8,29 +8,25 @@
   </div>
 </form>
 
-
-<div class="tab-pane" id="tab-tags">
-<div class="panel-group" id="accordion">
-  <h2 class="center">{{ site.locals.tags }}</h2>
+<h2 class="center">标签</h2>
+<select class="form-control">
   {% for tag in site.tags %} 
-	<div class="panel panel-info">
-	  <div class="panel-heading">
-		<h4 class="panel-title">
-		  <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#tag-{{ tag[0] }}">{{ tag[0] }}</a>
-		  <span class="badge pull-right">{{ tag[1].size }}</span>
-		</h4>
-	  </div>
-	  <div id="tag-{{ tag[0] }}" class="panel-collapse collapse">
-		{% for post in tag[1] %}
-		  <a  href='{{ site.baseurl }}{{ post.url }}' class="list-group-item pjaxlink sidebar-a">
-			{{post.title}}
-		  </a>
-		{% endfor %}
-	  </div>
-	</div>
+  <option><a href="#tag-{{ tag[0] }}">{{ tag[0] }}&nbsp;({{ tag[1].size }})</a></option>
   {% endfor %}
-</div>
-</div>
+</select>
+
+<dl class="dl-horizontal">
+  {% for tag in site.tags %} 
+  <dt><a href="#tag-{{ tag[0] }}">{{ tag[0] }}</a></dt>
+  <dd>({{ tag[1].size }})</dd>
+  {% endfor %}
+</dl>
+
+<ul class="list-unstyled">
+  {% for tag in site.tags %} 
+  <li><a href="#tag-{{ tag[0] }}">{{ tag[0] }}&nbsp;({{ tag[1].size }})</a></li>
+  {% endfor %}
+</ul>
 
 
 {% if site.comments.duoshuo.name %}
