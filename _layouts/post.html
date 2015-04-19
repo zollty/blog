@@ -1,25 +1,40 @@
 ---
-layout: default
+layout: index
 ---
 
-<div class="nrow-div">
-<div class="col-md-12">
-<h2 class="title">{{ page.title }}$&nbsp;&nbsp;<time class="small">{{ page.date | date: "%Y.%m.%d" }}</time></h2>
-{{ content }}
-<ul class="pager">
-{% if page.next %}
-  <li class="next"><a href="{{ site.baseurl }}{{ page.next.url }}" title="{{ page.next.date | date: "%Y-%m-%d %H:%M" }}">（更新）后一条 &rarr;</a></li>
-{% else %}
-  <li class="next disabled"><a href="#">（更新）后一条 &rarr;</a></li>
-{% endif %}
-  
-{% if page.previous %}
-  <li class="previous"><a  href="{{ site.baseurl }}{{ page.previous.url }}" title="{{ page.previous.date | date: "%Y-%m-%d %H:%M" }}">&larr; （更早）前一条</a></li>
-{% else %}
-  <li class="previous disabled"><a href="#">&larr; （更早）前一条</a></li>
-{% endif %}
-</ul>
+<div class="col-md-8 bk-color">
+  {% include sed-header.html %}
 
-{% include comments.html %}
+  <div class="post-card">
+
+	{{ content }}
+	
+	<span class="meta"><i class="fa fa-calendar"></i> {{ page.date | date:"%Y-%m-%d %H:%M" | remove: " 00:00" }}
+	{% if page.tags.size >0 %}&nbsp;&nbsp;&nbsp;<i class="fa fa-tags"></i>
+	{% for tag in page.tags %}
+	&nbsp;&nbsp;<a class="func-a" href="/tags/#{{ tag | cgi_escape | remove: "%" }}">{{ tag }}</a>
+	{% endfor %}
+	{% endif %}</span>
+
+  </div>
+  <div class="my-pager">
+	<ul class="pager">
+	{% if page.previous %}
+	  <li class="previous"><a  href="{{ site.baseurl }}{{ page.previous.url }}" title="{{ page.previous.date | date: "%Y-%m-%d %H:%M" }}">&larr; （更早）后一条</a></li>
+	{% else %}
+	  <li class="previous disabled"><a href="#">&larr; （更早）后一条</a></li>
+	{% endif %}
+	
+	{% if page.next %}
+	  <li class="next"><a href="{{ site.baseurl }}{{ page.next.url }}" title="{{ page.next.date | date: "%Y-%m-%d %H:%M" }}">（更新）前一条 &rarr;</a></li>
+	{% else %}
+	  <li class="next disabled"><a href="#">（更新）前一条 &rarr;</a></li>
+	{% endif %}
+	</ul>
+  </div>
+  {% include comments.html %}
+
 </div>
+<div class="col-md-4 visible-lg visible-md">
+  {% include recently_comments.html %}
 </div>

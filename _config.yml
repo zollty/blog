@@ -35,7 +35,7 @@ defaults:
       path: ""
       type: "posts" # The different types that are available to you are pages, posts, drafts or any collection in your site.
     values:
-      layout: "post2"
+      layout: "post"
 
 author:
     name: zollty
