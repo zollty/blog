@@ -231,11 +231,12 @@ img {
     font-size: 13px;
     color: #818181;
   }
-  .func-a {
+  a.func-a {
 	color: lighten($base03, 10%);
-  }
-  a:hover {
-    color: #2ecc71;
+	&:hover,
+	&:focus {
+	  color: #2ECC71;
+	}
   }
 }
 
