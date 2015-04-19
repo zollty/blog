@@ -2,22 +2,41 @@
 layout: index
 ---
 
-<div class="col-md-12">
-<h2 class="title">{{ page.title }}$&nbsp;&nbsp;<time class="small">{{ page.date | date: "%Y.%m.%d" }}</time></h2>
-{{ content }}
-<ul class="pager">
-{% if page.next %}
-  <li class="next"><a href="{{ site.baseurl }}{{ page.next.url }}" title="{{ page.next.date | date: "%Y-%m-%d %H:%M" }}">（更新）后一条 &rarr;</a></li>
-{% else %}
-  <li class="next disabled"><a href="#">（更新）后一条 &rarr;</a></li>
-{% endif %}
-  
-{% if page.previous %}
-  <li class="previous"><a  href="{{ site.baseurl }}{{ page.previous.url }}" title="{{ page.previous.date | date: "%Y-%m-%d %H:%M" }}">&larr; （更早）前一条</a></li>
-{% else %}
-  <li class="previous disabled"><a href="#">&larr; （更早）前一条</a></li>
-{% endif %}
-</ul>
+<div class="col-md-8 bk-color">
+  <div class="sed-header">
+    <span class="title"><a title="{{ site.description }}" href="{{ site.url }}">{{ site.title }}</a></span>
+    <span class="pull-right top-bar">
+		<span><a href="{{ site.baseurl }}{{ '/tags' }}" title="分类|标签" rel="nofollow"><span class='fa fa-tags fa-lg'></span></a></span>&nbsp;&nbsp;
+		<span><a href="{{ site.baseurl }}{{ '/about' }}" title="关于"><span class='fa fa-user fa-lg'></span></a></span>&nbsp;&nbsp;&nbsp;
+	</span>
+  </div>
 
-{% include comments.html %}
+
+  <div class="post-card">
+  
+    <h2 class="title">{{ page.title }}$&nbsp;&nbsp;<time class="small">{{ page.date | date: "%Y.%m.%d" }}</time></h2>
+	{{ content }}
+	<ul class="pager">
+	{% if page.next %}
+	  <li class="next"><a href="{{ site.baseurl }}{{ page.next.url }}" title="{{ page.next.date | date: "%Y-%m-%d %H:%M" }}">（更新）后一条 &rarr;</a></li>
+	{% else %}
+	  <li class="next disabled"><a href="#">（更新）后一条 &rarr;</a></li>
+	{% endif %}
+	  
+	{% if page.previous %}
+	  <li class="previous"><a  href="{{ site.baseurl }}{{ page.previous.url }}" title="{{ page.previous.date | date: "%Y-%m-%d %H:%M" }}">&larr; （更早）前一条</a></li>
+	{% else %}
+	  <li class="previous disabled"><a href="#">&larr; （更早）前一条</a></li>
+	{% endif %}
+	</ul>
+
+	{% include comments.html %}
+
+  </div>
+
+
+
+</div>
+<div class="col-md-4 visible-lg visible-md">
+  {% include recently_comments.html %}
 </div>
