@@ -1,7 +1,14 @@
 ---
-layout: default
+layout: base
 ---
-<div class="col-md-12">
-<h2 class="title">{{ page.title }}</h2>
-{{ content }}
+
+<div class="col-md-8 my-col-wrap">
+  {% include sed-header.html %}
+
+  {{ content }}
+
+</div>
+
+<div class="col-md-4 visible-lg visible-md">
+  {% include recently_comments.html %}
 </div>
