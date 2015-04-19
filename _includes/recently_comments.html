@@ -1,7 +1,21 @@
 {% if site.comments.duoshuo.name %}
-  <form id="search-form" class="form-group has-success visible-lg" role="form">
+  
+  <br/>
+  <form class="form-inline visible-lg">
+  <div class="form-group" style="width: 100%;">
+    <label class="sr-only" for="search-cont">Search keywords</label>
+    <div class="input-group" style="width: 100%;">
+      <input type="text" class="form-control" id="search-cont" placeholder="Search...">
+      <a class="input-group-addon" href="#">搜索</a>
+    </div>
+  </div>
+</form>
+<br/>
+<form id="search-form" class="form-group has-success visible-lg" role="form">
 	<input type="text" class="form-control input-sm" placeholder="Search" id="query">
   </form>
+  
+  
   <h3 class="title">最新评论</h3>
   <ul class="ds-recent-comments" data-num-items="{{ site.comments.duoshuo.rcomments.num }}" data-show-avatars="{{ site.comments.duoshuo.rcomments.avatar }}" data-show-time="{{ site.comments.duoshuo.rcomments.time }}" data-show-title="{{ site.comments.duoshuo.rcomments.title }}" data-show-admin="{{ site.comments.duoshuo.rcomments.admin }}" data-excerpt-length="{{ site.comments.duoshuo.rcomments.length }}"></ul>
 {% endif %}
