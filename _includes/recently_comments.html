@@ -41,18 +41,6 @@
 	</ul>
 </div>
 
-<div class="my-side-tags">
-	<ul class="list-group">
-	  {% for tag in site.tags %} 
-	  <li class="list-group-item">
-		<a href="#tag-{{ tag[0] }}">{{ tag[0] }}</a>
-		<span class="badge">{{ tag[1].size }}</span>
-	  </li>
-	  {% endfor %}
-	</ul>
-</div>
-
-
   <div class="my-side-tags">
 	<ul class="list-group">
 {% assign ym_count = 0 %}
