@@ -18,13 +18,22 @@
 <dl class="dl-horizontal">
   {% for tag in site.tags %} 
   <dt><a href="#tag-{{ tag[0] }}">{{ tag[0] }}</a></dt>
-  <dd><span class="badge">({{ tag[1].size }})</span></dd>
+  <dd><span class="badge">{{ tag[1].size }}</span></dd>
   {% endfor %}
 </dl>
 
 <ul class="list-unstyled">
   {% for tag in site.tags %} 
-  <li><a href="#tag-{{ tag[0] }}">{{ tag[0] }}&nbsp;<span class="badge">({{ tag[1].size }})</span></a></li>
+  <li><a href="#tag-{{ tag[0] }}">{{ tag[0] }}&nbsp;<span class="badge">{{ tag[1].size }}</span></a></li>
+  {% endfor %}
+</ul>
+
+<ul class="list-group">
+  {% for tag in site.tags %} 
+  <li class="list-group-item">
+    <a href="#tag-{{ tag[0] }}">{{ tag[0] }}</a>
+	<span class="badge">{{ tag[1].size }}</span>
+  </li>
   {% endfor %}
 </ul>
 
