@@ -16,6 +16,9 @@ layout: index
   
     <h2 class="title">{{ page.title }}$&nbsp;&nbsp;<time class="small">{{ page.date | date: "%Y.%m.%d" }}</time></h2>
 	{{ content }}
+	
+  </div>
+  
 	<ul class="pager">
 	{% if page.next %}
 	  <li class="next"><a href="{{ site.baseurl }}{{ page.next.url }}" title="{{ page.next.date | date: "%Y-%m-%d %H:%M" }}">（更新）后一条 &rarr;</a></li>
@@ -29,7 +32,6 @@ layout: index
 	  <li class="previous disabled"><a href="#">&larr; （更早）前一条</a></li>
 	{% endif %}
 	</ul>
-  </div>
   {% include comments.html %}
 
 </div>
