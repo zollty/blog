@@ -10,7 +10,7 @@
 	</div>
 </div>
 
-<h3 class="title">分类</h3>
+<h3 class="my-h3-title">分类</h3>
 <div class="my-side-tags">
 	<ul class="list-group">
 	  {% for tag in site.tags %} 
@@ -22,7 +22,7 @@
 	</ul>
 </div>
 
-<h3 class="title">存档</h3>
+<h3 class="my-h3-title">存档</h3>
   <div class="my-side-tags">
 	<ul class="list-group">
 {% assign ym_count = 0 %}
@@ -55,6 +55,6 @@
 </div>
 
 {% if site.comments.duoshuo.name %}
-  <h3 class="title">最新评论</h3>
+  <h3 class="my-h3-title">最新评论</h3>
   <ul class="ds-recent-comments" data-num-items="{{ site.comments.duoshuo.rcomments.num }}" data-show-avatars="{{ site.comments.duoshuo.rcomments.avatar }}" data-show-time="{{ site.comments.duoshuo.rcomments.time }}" data-show-title="{{ site.comments.duoshuo.rcomments.title }}" data-show-admin="{{ site.comments.duoshuo.rcomments.admin }}" data-excerpt-length="{{ site.comments.duoshuo.rcomments.length }}"></ul>
 {% endif %}
