@@ -52,6 +52,59 @@
 	</ul>
 </div>
 
+
+  <div class="my-side-tags">
+	<ul class="list-group">
+{% assign ym_count = 0 %}
+{% for post in site.posts %}
+    {% capture year %}{{ post.date | date: "%Y" }}{% endcapture %}
+    {% capture month %}{{ post.date | date: "%b" }}{% endcapture %}
+    {% capture nyear %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+    {% capture nmonth %}{{ post.previous.date | date: "%b" }}{% endcapture %}
+
+    {% if forloop.first %}
+	  <li class="list-group-item">
+		<a href="#tag-{{ tag[0] }}">{{ year }}-{{ month }}</a>
+    {% endif %}
+
+    {% increment ym_count %}
+
+    {% if forloop.last %}
+      <span class="badge">{{ ym_count }}</span>
+	  </li>
+    {% else %}
+        {% if year != nyear %}
+		  <span class="badge">{{ ym_count }}</span>
+	  </li>
+	  {% assign ym_count = 0 %}
+	  <li class="list-group-item">
+		<a href="#tag-{{ tag[0] }}">{{ year }}-{{ month }}</a>
+        {% else %}
+          {% if month != nmonth %}
+			<span class="badge">{{ ym_count }}</span>
+	  </li>
+	  {% assign ym_count = 0 %}
+	  <li class="list-group-item">
+		<a href="#tag-{{ tag[0] }}">{{ year }}-{{ month }}</a>
+          {% endif %}
+        {% endif %}
+    {% endif %}
+{% endfor %}
+	</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 {% if site.comments.duoshuo.name %}
   <h3 class="title">最新评论</h3>
   <ul class="ds-recent-comments" data-num-items="{{ site.comments.duoshuo.rcomments.num }}" data-show-avatars="{{ site.comments.duoshuo.rcomments.avatar }}" data-show-time="{{ site.comments.duoshuo.rcomments.time }}" data-show-title="{{ site.comments.duoshuo.rcomments.title }}" data-show-admin="{{ site.comments.duoshuo.rcomments.admin }}" data-excerpt-length="{{ site.comments.duoshuo.rcomments.length }}"></ul>
