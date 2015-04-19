@@ -237,6 +237,13 @@ img {
 	  color: lighten($base03, 10%);
 	}
   }
+  a.more-a {
+	color: lighten($base03, 10%);
+	&:hover,
+	&:focus {
+	  color: #2ECC71;
+	}
+  }
 }
 
 .bk-color{
