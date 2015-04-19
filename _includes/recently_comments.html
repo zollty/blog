@@ -8,6 +8,31 @@
   </div>
 </form>
 
+
+<div class="tab-pane" id="tab-tags">
+<div class="panel-group" id="accordion">
+  <h2 class="center">{{ site.locals.tags }}</h2>
+  {% for tag in site.tags %} 
+	<div class="panel panel-info">
+	  <div class="panel-heading">
+		<h4 class="panel-title">
+		  <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#tag-{{ tag[0] }}">{{ tag[0] }}</a>
+		  <span class="badge pull-right">{{ tag[1].size }}</span>
+		</h4>
+	  </div>
+	  <div id="tag-{{ tag[0] }}" class="panel-collapse collapse">
+		{% for post in tag[1] %}
+		  <a  href='{{ site.baseurl }}{{ post.url }}' class="list-group-item pjaxlink sidebar-a">
+			{{post.title}}
+		  </a>
+		{% endfor %}
+	  </div>
+	</div>
+  {% endfor %}
+</div>
+</div>
+
+
 {% if site.comments.duoshuo.name %}
   <h3 class="title">最新评论</h3>
   <ul class="ds-recent-comments" data-num-items="{{ site.comments.duoshuo.rcomments.num }}" data-show-avatars="{{ site.comments.duoshuo.rcomments.avatar }}" data-show-time="{{ site.comments.duoshuo.rcomments.time }}" data-show-title="{{ site.comments.duoshuo.rcomments.title }}" data-show-admin="{{ site.comments.duoshuo.rcomments.admin }}" data-excerpt-length="{{ site.comments.duoshuo.rcomments.length }}"></ul>
