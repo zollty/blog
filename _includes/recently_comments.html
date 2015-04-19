@@ -18,13 +18,13 @@
 <dl class="dl-horizontal">
   {% for tag in site.tags %} 
   <dt><a href="#tag-{{ tag[0] }}">{{ tag[0] }}</a></dt>
-  <dd>({{ tag[1].size }})</dd>
+  <dd><span class="badge">({{ tag[1].size }})</span></dd>
   {% endfor %}
 </dl>
 
 <ul class="list-unstyled">
   {% for tag in site.tags %} 
-  <li><a href="#tag-{{ tag[0] }}">{{ tag[0] }}&nbsp;({{ tag[1].size }})</a></li>
+  <li><a href="#tag-{{ tag[0] }}">{{ tag[0] }}&nbsp;<span class="badge">({{ tag[1].size }})</span></a></li>
   {% endfor %}
 </ul>
 
