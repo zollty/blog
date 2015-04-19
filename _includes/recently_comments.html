@@ -8,6 +8,18 @@
   </div>
 </form>
 
+<div class="form-group has-feedback">
+    <label class="sr-only" for="search-input">Search keywords</label>
+	<div class="input-group">
+		<input type="text" class="form-control" id="search-input" placeholder="站内搜索...">
+		<span class="input-group-btn">
+			<button class="btn btn-default" type="submit">
+			<span class="glyphicon glyphicon-search"></span>
+			</button>
+		</span>
+	</div>
+</div>
+
 <h2 class="center">标签</h2>
 <select class="form-control">
   {% for tag in site.tags %} 
@@ -27,6 +39,17 @@
   <li><a href="#tag-{{ tag[0] }}">{{ tag[0] }}&nbsp;<span class="badge">{{ tag[1].size }}</span></a></li>
   {% endfor %}
 </ul>
+
+<div class="my-side-tags">
+	<ul class="list-group">
+	  {% for tag in site.tags %} 
+	  <li class="list-group-item">
+		<a href="#tag-{{ tag[0] }}">{{ tag[0] }}</a>
+		<span class="badge">{{ tag[1].size }}</span>
+	  </li>
+	  {% endfor %}
+	</ul>
+</div>
 
 <div class="my-side-tags">
 	<ul class="list-group">
