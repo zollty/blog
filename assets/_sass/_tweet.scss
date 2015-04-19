@@ -232,10 +232,9 @@ img {
     color: #818181;
   }
   a.func-a {
-	color: lighten($base03, 10%);
 	&:hover,
 	&:focus {
-	  color: #2ECC71;
+	  color: lighten($base03, 10%);
 	}
   }
 }
