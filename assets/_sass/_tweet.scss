@@ -234,6 +234,9 @@ img {
   .func-a {
 	color: lighten($base03, 10%);
   }
+  a:hover {
+    color: #2ecc71;
+  }
 }
 
 .bk-color{
