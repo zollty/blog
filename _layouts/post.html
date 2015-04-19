@@ -22,13 +22,13 @@ layout: base
 	{% if page.next %}
 	  <li class="previous"><a href="{{ site.baseurl }}{{ page.next.url }}" title="{{ page.next.date | date: "%Y-%m-%d %H:%M" }}">&larr; （更新）前一条</a></li>
 	{% else %}
-	  <li class="next disabled"><a href="#">&larr; （更新）前一条</a></li>
+	  <li class="previous disabled"><a href="#">&larr; （更新）前一条</a></li>
 	{% endif %}
 	
 	{% if page.previous %}
 	  <li class="next"><a  href="{{ site.baseurl }}{{ page.previous.url }}" title="{{ page.previous.date | date: "%Y-%m-%d %H:%M" }}">（更早）后一条 &rarr;</a></li>
 	{% else %}
-	  <li class="previous disabled"><a href="#">（更早）后一条 &rarr;</a></li>
+	  <li class="next disabled"><a href="#">（更早）后一条 &rarr;</a></li>
 	{% endif %}
 	</ul>
   </div>
