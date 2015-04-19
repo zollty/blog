@@ -75,17 +75,17 @@
     {% else %}
         {% if year != nyear %}
 		  <span class="badge">{{ ym_count }}</span>
-	  </li>
-	  {% assign ym_count = 0 %}
-	  <li class="list-group-item">
-		<a href="#tag-{{ tag[0] }}">{{ year }}-{{ month }}</a>
+		  </li>
+		  {% assign ym_count = 0 %}
+		  <li class="list-group-item">
+			<a href="#tag-{{ tag[0] }}">{{ nyear }}-{{ month }}</a>
         {% else %}
           {% if month != nmonth %}
-			<span class="badge">{{ ym_count }}</span>
-	  </li>
-	  {% assign ym_count = 0 %}
-	  <li class="list-group-item">
-		<a href="#tag-{{ tag[0] }}">{{ year }}-{{ month }}</a>
+			  <span class="badge">{{ ym_count }}</span>
+			  </li>
+			  {% assign ym_count = 0 %}
+			  <li class="list-group-item">
+				<a href="#tag-{{ tag[0] }}">{{ year }}-{{ nmonth }}</a>
           {% endif %}
         {% endif %}
     {% endif %}
