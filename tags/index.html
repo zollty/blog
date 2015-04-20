@@ -1,0 +1,22 @@
+---
+title: 标签
+layout: page
+---
+
+{% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign tag_words = site_tags | split:',' | sort %}
+<div id='my-tag-wr'>
+{% for item in (0..site.tags.size) %}{% unless forloop.last %}
+{% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
+  <a href="#{{ this_word | cgi_escape | remove: "%" }}" title="{{ this_word }}" rel="{{ site.tags[this_word].size }}">{{ this_word }} <sup>{{ site.tags[this_word].size }}</sup></a>
+{% endunless %}{% endfor %}
+</div>
+<div class="my-tag-wr">
+{% for item in (0..site.tags.size) %}{% unless forloop.last %}
+	{% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
+	<h4 id="{{ this_word | cgi_escape | remove: "%" }}">{{ this_word }}</h4>
+	<ul>{% for post in site.tags[this_word] %}{% if post.title != null %}
+	<li class="pagi-list-item"><time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%Y-%m-%d" }}</time> &raquo; <a class="pjaxlink" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+	{% endif %}{% endfor %}</ul>
+{% endunless %}{% endfor %}
+</div>

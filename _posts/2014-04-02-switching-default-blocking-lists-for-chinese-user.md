@@ -1,5 +1,5 @@
 ---
-layout: lg-post
+layout: post-lg
 title: "Adblock Plus 官方切换 ChinaList"
 tags: [Adblock, ChinaList]
 ---
