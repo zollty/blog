@@ -30,7 +30,7 @@ sass:
 favicon: http://ires.qiniudn.com/my/img/favicon.ico
 
 collections:
-  - life:
+  life:
     output: true
 
 defaults:
