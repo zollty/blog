@@ -29,15 +29,11 @@ sass:
 
 favicon: http://ires.qiniudn.com/my/img/favicon.ico
 
-collections:
-  life:
-    output: true
-
 defaults:
   -
     scope:
-      path: ""
-      type: "life" # The different types that are available to you are pages, posts, drafts or any collection in your site.
+      path: "post/"
+      type: "posts" # The different types that are available to you are pages, posts, drafts or any collection in your site.
     values:
       layout: "post"
 
