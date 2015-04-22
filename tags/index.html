@@ -9,7 +9,7 @@ layout: page
 	{% assign tmp = cates.size | minus:2 %}
 	{% if tmp >= cat.size %}
 	  {% for ca in cat %}
-	    {% assign t1 = ca.size | minus:forloop.index %}
+	    {% assign t1 = cat.size | minus:forloop.index %}
 		{% assign t2 = cates.size | minus:forloop.index %}
 		{% assign t3 = t2 | minus:1 %}
 	    {% if cat[t1] != cates[t3] %}
