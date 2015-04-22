@@ -3,13 +3,17 @@ title: 标签
 layout: page
 ---
 
-<!-- 
+
 {% for cat in site.data.cats %}
+  <h4>{{ cat }}</h4>
+  
+  <h3>{{ cat[cat.size-1] }}</h3>
+  
   {% for ca in cat %}
     {{ ca }}
   {% endfor %}
 {% endfor %}
--->
+
 
 {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
 {% assign tag_words = site_tags | split:',' | sort %}
