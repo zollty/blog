@@ -10,7 +10,7 @@ layout: post-p
 var postList = [
 {% for post in site.posts %}
   {% if forloop.last %}
-    {"tags": {
+    {"tags": [
 	
 	{% assign cates = post.path | split:"/" %}
 	{% for cate in cates %}
@@ -27,9 +27,9 @@ var postList = [
 	{% endfor %}
 	
 	
-	},"url": "{{ post.url }}"}
+	],"url": "{{ post.url }}"}
   {% else %}
-    {"tags": {
+    {"tags": [
 	
 	{% assign cates = post.path | split:"/" %}
 	{% for cate in cates %}
@@ -46,7 +46,7 @@ var postList = [
 	{% endfor %}
 	
 	
-	},"url": "{{ post.url }}"},
+	],"url": "{{ post.url }}"},
   {% endif %}
 {% endfor %}
 ];
