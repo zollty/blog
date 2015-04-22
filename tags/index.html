@@ -8,7 +8,8 @@ layout: page
   <h4>{{ cat }}{{ cat.size }}</h4>
   <h4>{{ cat[0] }}</h4>
   <h4>{{ cat.size | minus:1 }}</h4>
-  <h3>{{ cat[cat.size | minus:1] }}</h3>
+  {% assign p = cat.size | minus:1 %}
+  <h3>{{ cat[p] }}</h3>
   
   {% for ca in cat %}
     {{ ca }}
