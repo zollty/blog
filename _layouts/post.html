@@ -29,7 +29,24 @@ var postList = [
 	
 	},"url": "{{ post.url }}"}
   {% else %}
-    ,
+    {"tags": {
+	
+	{% assign cates = post.path | split:"/" %}
+	{% for cate in cates %}
+	  {% if forloop.last %}
+	  {% else %}
+		{% if forloop.index >1 %}
+		    {% if forloop.rindex >2 %}
+			  "{{ cate }}",
+			{% else %}
+			  "{{ cate }}"
+			{% endif %}
+		{% endif %}
+	  {% endif %}
+	{% endfor %}
+	
+	
+	},"url": "{{ post.url }}"},
   {% endif %}
 {% endfor %}
 ];
