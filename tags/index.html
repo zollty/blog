@@ -13,7 +13,7 @@ layout: page
 		{% assign t2 = cates.size | minus:forloop.index %}
 		{% assign t3 = t2 | minus:1 %}
 	    {% if ca[t1] != cates[t3] %}
-		  {% break %}
+		  {{ ca[t1] }} -- {{ cates[t3] }} {% break %}
 		{% else %}
 		  {% if forloop.last %}
 		    {{ post.url }}
