@@ -8,7 +8,7 @@ layout: page
   {% for post in site.posts %}
     {% assign cates = post.path | split:"/" %}
 	{% assign tmp = cates.size | minus:2 %}
-	{% if tmp <= cat.size %}
+	{% if tmp >= cat.size %}
 	  {{ post.url }}
 	{% endif %}
   {% endfor %}
