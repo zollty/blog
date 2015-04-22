@@ -4,7 +4,16 @@ layout: post-p
 
 {% include sed-header.html %}
 
-  <div class="post-card">
+  <div class="post-card"><!-- 
+
+{% assign my.cates = page.path | split:"/" %}
+{% assign my.len = 10 %}
+{% for cate in my.cates %}
+  {{ cate }}
+{% endfor %}
+----{{ my.len }}
+
+  -->
 
 	{{ content }}
 	
