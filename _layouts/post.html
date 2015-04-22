@@ -4,7 +4,20 @@ layout: post-p
 
 {% include sed-header.html %}
 
-  <div class="post-card"><!-- {{ page.path }} -->
+  <div class="post-card"><!-- 
+
+{% assign cates = page.path | split:"/" | sort %}
+{% for cate in cates %}
+  {% if forloop.last %}
+  {% else %}
+    {% if forloop.index >1 %}
+		{{ cate }}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+  
+
+  -->
 
 	{{ content }}
 	
