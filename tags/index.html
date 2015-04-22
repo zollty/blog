@@ -5,15 +5,14 @@ layout: page
 
 
 {% for cat in site.data.cats %}
-  <h4>{{ cat }}{{ cat.size }}</h4>
-  <h4>{{ cat[0] }}</h4>
-  <h4>{{ cat.size | minus:1 }}</h4>
-  {% assign p = cat.size | minus:1 %}
-  <h3>{{ cat[p] }}</h3>
-  
-  {% for ca in cat %}
-    {{ ca }}
+  {% for post in site.posts %}
+    {% assign cates = post.path | split:"/" %}
+	{% assign tmp = cates.size | minus:2 %}
+	{% if tmp <= cat.size %}
+	  {{ post.url }}
+	{% endif %}
   {% endfor %}
+  ---<br/>
 {% endfor %}
 
 
