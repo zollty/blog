@@ -7,7 +7,7 @@ layout: page
 {% for cat in site.data.cats %}
   <h4>{{ cat }}{{ cat.size }}</h4>
   
-  <h3>{{ cat[cat.size | minus:1 }}</h3>
+  <h3>{{ cat[cat.size | minus:1] }}</h3>
   
   {% for ca in cat %}
     {{ ca }}
