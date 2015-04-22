@@ -9,10 +9,11 @@ layout: post-p
 {% assign cates = page.path | split:"/" | sort %}
 {{ cates.size }}
 {% for cate in cates %}
+  {{ cate }}
   {% if forloop.last %}
   {% else %}
     {% if forloop.index >1 %}
-		{{ cate }}
+		{{ '-------' }}{{ cate }}
     {% endif %}
   {% endif %}
 {% endfor %}
