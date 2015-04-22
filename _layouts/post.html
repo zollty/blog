@@ -5,9 +5,39 @@ layout: post-p
 {% include sed-header.html %}
 
 <script>
- var arr = ['aa','{{ site.baseurl }}'];
- alert(arr[1]);
+
+
+var postList = [
+{% for post in site.posts %}
+  {% if forloop.last %}
+    {"tags": {
+	
+	{% assign cates = post.path | split:"/" %}
+	{% for cate in cates %}
+	  {% if forloop.last %}
+	  {% else %}
+		{% if forloop.index >1 %}
+		    {% if forloop.rindex >2 %}
+			  "{{ cate }}",
+			{% else %}
+			  "{{ cate }}"
+			{% endif %}
+		{% endif %}
+	  {% endif %}
+	{% endfor %}
+	
+	
+	},"url": "{{ post.url }}"}
+  {% else %}
+    ,
+  {% endif %}
+{% endfor %}
+];
+
+
 </script>
+
+
   <div class="post-card">
 
 	{{ content }}
