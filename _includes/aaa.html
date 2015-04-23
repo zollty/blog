@@ -1,1 +1,21 @@
-{% assign zollty = page.path | split:"/" %}
+{% for cat in ccc %}
+  {% for post in site.posts %}
+    {% assign cates = post.path | split:"/" %}
+	{% assign tmp = cates.size | minus:2 %}
+	{% if tmp >= cat.size %}
+	  {% for ca in cat %}
+	    {% assign t1 = cat.size | minus:forloop.index %}
+		{% assign t2 = cates.size | minus:forloop.index %}
+		{% assign t3 = t2 | minus:1 %}
+	    {% if cat[t1] != cates[t3] %}
+		  {% break %}
+		{% else %}
+		  {% if forloop.last %}
+		    {{ post.url }}
+		  {% endif %}
+		{% endif %}
+	  {% endfor %}
+	{% endif %}
+  {% endfor %}
+  ---<br/>
+{% endfor %}
