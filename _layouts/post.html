@@ -61,19 +61,5 @@ alert(postList.length+"ok");
 	{% include inner-tag.html %}
 
   </div>
-  <div class="my-pager">
-	<ul class="pager">
-	{% if page.next %}
-	  <li class="previous"><a href="{{ site.baseurl }}{{ page.next.url }}" title="{{ page.next.date | date: "%Y-%m-%d %H:%M" }}">&larr; （更新）前一条</a></li>
-	{% else %}
-	  <li class="previous disabled"><a href="javascript:void(0);">&larr; （更新）前一条</a></li>
-	{% endif %}
-	
-	{% if page.previous %}
-	  <li class="next"><a  href="{{ site.baseurl }}{{ page.previous.url }}" title="{{ page.previous.date | date: "%Y-%m-%d %H:%M" }}">（更早）后一条 &rarr;</a></li>
-	{% else %}
-	  <li class="next disabled"><a href="javascript:void(0);">（更早）后一条 &rarr;</a></li>
-	{% endif %}
-	</ul>
-  </div>
+  {% include pager.html %}
   {% include comments.html %}
