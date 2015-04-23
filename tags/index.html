@@ -10,6 +10,10 @@ layout: page
 {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
   <a href="#{{ this_word | cgi_escape | remove: "%" }}" title="{{ this_word }}" rel="{{ site.tags[this_word].size }}">{{ this_word }} <sup>{{ site.tags[this_word].size }}</sup></a>
 {% endunless %}{% endfor %}
+
+{% for cat in site.data.cats %}
+  <a href="#{{ cat | join:"-" | cgi_escape | remove: "%" }}" title="{{ cat | join:"|" }}" rel="{{ 20 }}">{{ cat | join:"|" }}</a>
+{% endfor %}
 </div>
 <div class="my-tag-wr">
 {% for item in (0..site.tags.size) %}{% unless forloop.last %}
@@ -23,7 +27,7 @@ layout: page
 
 
 {% for cat in site.data.cats %}
-  <h3>{{ cat | join:" &raquo; " }}</h3>
+  <h3 id="{{ cat | join:"-" | cgi_escape | remove: "%" }}">{{ cat | join:" &raquo; " }}</h3>
   {% for post in site.posts %}
     {% assign cates = post.path | split:"/" %}
 	{% assign tmp = cates.size | minus:2 %}
