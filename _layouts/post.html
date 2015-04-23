@@ -57,24 +57,8 @@ alert(postList.length);
   <div class="post-card">
 
 	{{ content }}
-	
-	<span class="meta">
-	  <i class="fa fa-calendar"></i>
-	  {{ page.date | date:"%Y-%m-%d %H:%M" | remove: " 00:00" }}
-	  &nbsp;&nbsp;&nbsp;<i class="fa fa-tags"></i>
-	{% assign cates = page.path | split:"/" %}
-	{% for cate in cates %}
-	  {% if forloop.last %}
-	  {% else %}
-		{% if forloop.index >1 %}
-			&nbsp;&nbsp;<a class="func-a" href="{{ site.baseurl }}/tags/#{{ cate | cgi_escape | remove: "%" }}">{{ cate }}</a>
-		{% endif %}
-	  {% endif %}
-	{% endfor %}
-	  {% for tag in page.tags %}
-	    &nbsp;&nbsp;<a class="func-a" href="{{ site.baseurl }}/tags/#{{ tag | cgi_escape | remove: "%" }}">{{ tag }}</a>
-	  {% endfor %}
-	</span>
+	{% assign post = page %}
+	{% include inner-tag.html %}
 
   </div>
   <div class="my-pager">
