@@ -6,22 +6,7 @@ layout: base
   {% include sed-header.html %}
 
 {% for post in paginator.posts %}
-  <div class="post-card">
-    {% if post.content contains "<!-- more -->" %}
-      {{ post.content | split:'<!-- more -->' | first }}
-	  <p><a class="more-a" href="{{ site.baseurl }}{{ post.url }}">继续阅读全文 &raquo;</a></p>
-    {% else %}
-      {{ post.content }}
-    {% endif %}
-	
-	{% include inner-tag.html %}
-	
-	<p class="pull-right">
-	  <a class="func-a" href="{{ site.baseurl }}{{ post.url }}">查看</a>
-	  &nbsp;&nbsp;
-	  <a class="func-a" href="{{ site.baseurl }}{{ post.url }}#ds-thread">评论 </a>
-	</p>
-  </div>
+  {% include post-card.html %}
 {% endfor %}
 
   <!-- Pagination links -->
