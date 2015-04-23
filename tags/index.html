@@ -18,22 +18,7 @@ layout: page
 	<h3 id="{{ this_word | cgi_escape | remove: "%" }}">{{ this_word }}</h3>
 	{% for post in site.tags[this_word] %}
 	
-	<div class="post-card">
-	  {% if post.content contains "<!-- more -->" %}
-		{{ post.content | split:'<!-- more -->' | first }}
-		<p><a class="more-a" href="{{ site.baseurl }}{{ post.url }}">继续阅读全文 &raquo;</a></p>
-	  {% else %}
-		{{ post.content }}
-	  {% endif %}
-	
-	  {% include inner-tag.html %}
-	
-	  <p class="pull-right">
-		<a class="func-a" href="{{ site.baseurl }}{{ post.url }}">查看</a>
-		&nbsp;&nbsp;
-		<a class="func-a" href="{{ site.baseurl }}{{ post.url }}#ds-thread">评论 </a>
-	  </p>
-	</div>
+	  {% include post-card.html %}
 	
 	{% endfor %}
 {% endunless %}{% endfor %}
@@ -54,22 +39,7 @@ layout: page
 		{% else %}
 		  {% if forloop.last %}
 		    
-			<div class="post-card">
-			  {% if post.content contains "<!-- more -->" %}
-				{{ post.content | split:'<!-- more -->' | first }}
-				<p><a class="more-a" href="{{ site.baseurl }}{{ post.url }}">继续阅读全文 &raquo;</a></p>
-			  {% else %}
-				{{ post.content }}
-			  {% endif %}
-			
-			  {% include inner-tag.html %}
-			
-			  <p class="pull-right">
-				<a class="func-a" href="{{ site.baseurl }}{{ post.url }}">查看</a>
-				&nbsp;&nbsp;
-				<a class="func-a" href="{{ site.baseurl }}{{ post.url }}#ds-thread">评论 </a>
-			  </p>
-			</div>
+			{% include post-card.html %}
 			
 		  {% endif %}
 		{% endif %}
