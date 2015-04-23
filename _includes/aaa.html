@@ -1,5 +1,4 @@
-{% for cat in ccc %}
-  {% for post in site.posts %}
+{% for post in site.posts %}
     {% assign cates = post.path | split:"/" %}
 	{% assign tmp = cates.size | minus:2 %}
 	{% if tmp >= cat.size %}
@@ -17,5 +16,4 @@
 	  {% endfor %}
 	{% endif %}
   {% endfor %}
-  ---++<br/>
-{% endfor %}
+  ---@@@<br/>
