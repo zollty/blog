@@ -3,30 +3,6 @@ title: 标签
 layout: page
 ---
 
-
-
-{% for cat in site.data.cats %}
-  <h3>{{ cat }}</h3>
-  {% for post in site.posts %}
-    {% assign cates = post.path | split:"/" %}
-	{% assign tmp = cates.size | minus:2 %}
-	{% if tmp >= cat.size %}
-	  {% for ca in cat %}
-	    {% assign t1 = cat.size | minus:forloop.index %}
-		{% assign t2 = cates.size | minus:forloop.index %}
-		{% assign t3 = t2 | minus:1 %}
-	    {% if cat[t1] != cates[t3] %}
-		  {% break %}
-		{% else %}
-		  {% if forloop.last %}
-		    {{ post.url }}<br/>
-		  {% endif %}
-		{% endif %}
-	  {% endfor %}
-	{% endif %}
-  {% endfor %}
-{% endfor %}
-
 {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
 {% assign tag_words = site_tags | split:',' | sort %}
 <div id='my-tag-wr'>
@@ -44,3 +20,43 @@ layout: page
 	{% endif %}{% endfor %}</ul>
 {% endunless %}{% endfor %}
 </div>
+
+
+{% for cat in site.data.cats %}
+  <h3>{{ cat }}</h3>
+  {% for post in site.posts %}
+    {% assign cates = post.path | split:"/" %}
+	{% assign tmp = cates.size | minus:2 %}
+	{% if tmp >= cat.size %}
+	  {% for ca in cat %}
+	    {% assign t1 = cat.size | minus:forloop.index %}
+		{% assign t2 = cates.size | minus:forloop.index %}
+		{% assign t3 = t2 | minus:1 %}
+	    {% if cat[t1] != cates[t3] %}
+		  {% break %}
+		{% else %}
+		  {% if forloop.last %}
+		    
+			<div class="post-card">
+			  {% if post.content contains "<!-- more -->" %}
+				{{ post.content | split:'<!-- more -->' | first }}
+				<p><a class="more-a" href="{{ site.baseurl }}{{ post.url }}">继续阅读全文 &raquo;</a></p>
+			  {% else %}
+				{{ post.content }}
+			  {% endif %}
+			
+			  {% include inner-tag.html %}
+			
+			  <p class="pull-right">
+				<a class="func-a" href="{{ site.baseurl }}{{ post.url }}">查看</a>
+				&nbsp;&nbsp;
+				<a class="func-a" href="{{ site.baseurl }}{{ post.url }}#ds-thread">评论 </a>
+			  </p>
+			</div>
+			
+		  {% endif %}
+		{% endif %}
+	  {% endfor %}
+	{% endif %}
+  {% endfor %}
+{% endfor %}
