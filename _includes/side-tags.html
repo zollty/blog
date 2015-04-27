@@ -7,5 +7,10 @@
 		<span class="badge">{{ tag[1].size }}</span>
 	  </li>
 	  {% endfor %}
+	  {% for cat in site.data.cats %}
+	  <li class="list-group-item">
+		<a href="{{ site.baseurl }}/tags/#{{ cat.last | cgi_escape | remove: "%" }}">{{ cat | join:" &raquo; " }}</a>
+	  </li>
+	  {% endfor %}
 	</ul>
 </div>
