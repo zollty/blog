@@ -55,7 +55,7 @@ h1 {
 
 h2 {
   font-size: $font-size * 1.75;
-  color: $base02;
+  color: #A008A0;
 }
 
 h3 {
@@ -64,18 +64,18 @@ h3 {
 }
 
 h4 {
-  font-size: $font-size * 1.5;
+  font-size: $font-size * 1.375;
   color: $base04;
 }
 
 h5 {
   font-size: $font-size * 1.25;
-  color: darken($base05, 15%);
+  color: #1363BD;
 }
 
 h6 {
-  font-size: $font-size * 1.25;
-  color: darken($base06, 30%);
+  font-size: $font-size * 1.125;
+  color: #9E6604;
 }
 
 h1, h2, h3, h4, h5, h6, strong {
