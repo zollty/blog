@@ -83,6 +83,10 @@ hr {
   border-color: lighten($base03, 10%);
 }
 
+pre {
+  font-size: inherit;
+}
+
 time.small {
   font-size: 50%;
   color: darken($base07, 50% );
@@ -212,11 +216,11 @@ img {
 .my-footer {
   padding: 10px 18px 0px 0px;
   p {
-    color: darken($base07, 50% );
+    color: darken($base07, 50%);
     a {
-      color: darken($base07, 50% );
+      color: darken($base07, 50%);
       &:hover, &:focus {
-        color: lighten($base08, 30% );
+        color: lighten($base08, 30%);
       }
     }
   }
