@@ -21,6 +21,10 @@ $line-height: 1;
   font-family: "Helvetica Neue","Helvetica","Microsoft YaHei","WenQuanYi Micro Hei","Hiragino Sans GB",Simsun,Arial,sans-serif;
 }
 
+@mixin code-font {
+  font-family: Menlo,Monaco,Consolas,"Courier New","Microsoft YaHei","WenQuanYi Micro Hei","Hiragino Sans GB",Simsun,Arial,sans-serif;
+}
+
 @mixin text-shadow {
   text-shadow: 0 1px 0px $base07, 0 1px 1px rgba($base08, $alpha*3);
 }
@@ -85,6 +89,10 @@ hr {
 
 pre {
   font-size: inherit;
+}
+
+code, kbd, pre, samp {
+  @include code-font;
 }
 
 time.small {
