@@ -7,7 +7,11 @@
     {% capture this_month %}{{ post.date | date: "%m" }}{% endcapture %}
     {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
     {% capture next_month %}{{ post.previous.date | date: "%m" }}{% endcapture %}
-
+    
+	{% if this_year == '2001' or this_year == '2070' %}
+	  {% continue %}
+	{% endif %}
+	
     {% if forloop.first %}
 	  <li class="list-group-item">
 		<a href="{{ site.baseurl }}/archives/#{{ this_year }}-{{ this_month }}">{{ this_year }}-{{ this_month }}</a>
