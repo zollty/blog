@@ -7,7 +7,7 @@
     {% capture this_month %}{{ post.date | date: "%m" }}{% endcapture %}
     {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
     {% capture next_month %}{{ post.previous.date | date: "%m" }}{% endcapture %}
-    
+	
 	{% if this_year == '2001' or this_year == '2070' %}
 	  {% continue %}
 	{% endif %}
@@ -26,6 +26,10 @@
 		  <span class="badge">{{ forloop.index | minus: ym_count }}</span>
 		</li>
 		{% assign ym_count = forloop.index %}
+		
+		{% if next_year == '2001' or next_year == '2070' %}
+	      {% continue %}
+	    {% endif %}
 		<li class="list-group-item">
 		  <a href="{{ site.baseurl }}/archives/#{{ next_year }}-{{ next_month }}">{{ next_year }}-{{ next_month }}</a>
 	  {% endif %}
