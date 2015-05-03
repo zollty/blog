@@ -15,8 +15,12 @@ layout: base
 {% endif %}
   
 {% for post in paginator.posts %}
-  {% if post.sticky != true %}
+  {% if paginator.previous_page %}
     {% include post-card.html %}
+  {% else %}
+    {% if post.sticky != true %}
+      {% include post-card.html %}
+    {% endif %}
   {% endif %}
 {% endfor %}
 
