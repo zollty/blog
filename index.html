@@ -15,7 +15,9 @@ layout: base
 {% endif %}
   
 {% for post in paginator.posts %}
-  {% include post-card.html %}
+  {% if post.sticky != true %}
+    {% include post-card.html %}
+  {% endif %}
 {% endfor %}
 
   <!-- Pagination links -->
