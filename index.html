@@ -5,6 +5,15 @@ layout: base
 <div class="col-md-8 my-col-wrap">
   {% include sed-header.html %}
 
+{% if paginator.previous_page %}
+{% else %}
+  {% for post in site.posts %}
+    {% if post.sticky %}
+	  {% include post-card.html %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+  
 {% for post in paginator.posts %}
   {% include post-card.html %}
 {% endfor %}
