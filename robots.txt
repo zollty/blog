@@ -1,3 +1,2 @@
 User-agent: *
-Disallow: /index*
-Sitemap: http://blog.zollty.com/n/sitemap.xml
+Disallow: /n/
