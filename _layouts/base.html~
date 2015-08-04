@@ -22,6 +22,7 @@
     <script src="{{ site.baseurl }}{{ site.assets_path }}/js/ie10-viewport-bug-workaround.js"></script>
     <script src="{{ site.baseurl }}{{ site.assets_path }}/js/webcore.js"></script>
 
+    {% include baidu-analytics.html %}
     {% if site.comments.duoshuo.name %}
     <!-- duoshuo Begin -->
     <script type="text/javascript">
