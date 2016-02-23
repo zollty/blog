@@ -3,7 +3,6 @@ permalink: /tweet/:year/:month/:day/:title.html
 paginate: 10
 paginate_path: '/index:num'
 timezone:      Asia/Shanghai
-future: true
 
 # Conversion # Build settings
 lsi: true # 在github中是无效的
