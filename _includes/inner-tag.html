@@ -7,11 +7,11 @@
 	  {% if forloop.last %}
 	  {% else %}
 		{% if forloop.index >1 %}
-			&nbsp;&nbsp;<a class="func-a" href="{{ site.baseurl }}/tags/#{{ cate | cgi_escape | remove: "%" }}">{{ cate }}</a>
+			&nbsp;&nbsp;<a class="func-a cate" href="{{ site.baseurl }}/tags/#{{ cate | cgi_escape | remove: "%" }}">{{ cate }}</a>
 		{% endif %}
 	  {% endif %}
 	{% endfor %}
 	  {% for tag in post.tags %}
-	    &nbsp;&nbsp;<a class="func-a" href="{{ site.baseurl }}/tags/#{{ tag | cgi_escape | remove: "%" }}">{{ tag }}</a>
+	    &nbsp;&nbsp;<a class="func-a tag" href="{{ site.baseurl }}/tags/#{{ tag | cgi_escape | remove: "%" }}">{{ tag }}</a>
 	  {% endfor %}
 	</span>
