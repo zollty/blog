@@ -14,6 +14,10 @@ redcarpet:
 
 # Serving
 baseurl: /n # does not include hostname
+# cdn base url
+cdn_base_url:  http://s.h230.cn
+
+favicon: http://s.h230.cn/my/img/favicon.ico
 
 # 站点信息 # Site settings
 title: "Zollty随笔"
@@ -27,8 +31,6 @@ assets_path: /assets
 sass:
     sass_dir: assets/_sass
     style: :compressed
-
-favicon: http://ires.qiniudn.com/my/img/favicon.ico
 
 defaults:
   -
