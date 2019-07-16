@@ -1,5 +1,7 @@
-{% if site.comments.duoshuo.name %}
-<div id="comments" class="my-comments">
-  <div class="ds-thread" {% if page.id %}data-thread-key="{{ page.id }}"{% endif %}  data-title="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}"></div>
-</div>
-{% endif %}
+<script src="https://blog.zollty.com/utterances/client.js"
+        repo="zollty/n"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
