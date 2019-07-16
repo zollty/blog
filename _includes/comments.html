@@ -1,3 +1,5 @@
+{% if site.comments.enable %}
+<div id="comments" class="my-comments">
 <script src="https://blog.zollty.com/utterances/client.js"
         repo="zollty/n"
         issue-term="pathname"
@@ -5,3 +7,5 @@
         crossorigin="anonymous"
         async>
     </script>
+    </div>
+{% endif %}
