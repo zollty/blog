@@ -8,7 +8,7 @@ future: true
 # Conversion # Build settings
 lsi: true # 在github中是无效的
 highlighter: pygments
-markdown: rdiscount
+markdown: GFM
 redcarpet:
     extensions: ["fenced_code_blocks", "tables", "highlight", "strikethrough"]
 
