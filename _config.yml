@@ -8,7 +8,7 @@ future: true
 # Conversion # Build settings
 lsi: true # 在github中是无效的
 highlighter: rouge
-markdown: GFM
+markdown: kramdown
 redcarpet:
     extensions: ["fenced_code_blocks", "tables", "highlight", "strikethrough"]
 
@@ -55,3 +55,5 @@ analytics:
     baidu:
         siteid: b50955356fe8e228a2474f35de44053f        # 百度统计 js 代码后的字符串
 
+plugins:
+  - jekyll-paginate
