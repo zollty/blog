@@ -1,11 +1,14 @@
 {% if site.comments.enable %}
-<div id="comments" class="my-comments">
-<script src="https://zollty.github.io/utterances/client.js"
-        repo="zollty/n"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-    </script>
-    </div>
+<h5>评论（邮件通知作者）</h5>
+<div id="cusdis_thread"
+  class="my-comments"
+  data-host="http://msg.zollty.com"
+  data-app-id="a8faee4a-bba8-459f-9851-d021b0c2cab5"
+  data-page-id="{{ page.id }}"
+  data-page-url="{{ site.baseurl }}{{ page.url }}"
+  data-page-title="{{ page.title }}"
+  style="padding-left: 10px;"
+></div>
+<script defer src="http://msg.zollty.com/js/widget/lang/zh-cn.js"></script>
+<script async defer src="http://msg.zollty.com/js/cusdis.es.js"></script>
 {% endif %}
